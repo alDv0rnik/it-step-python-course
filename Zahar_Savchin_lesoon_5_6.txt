@@ -1,0 +1,27 @@
+1. Команда md и через пробел название дирректории (результут - появилась папка в проекте с названием дирректории)
+Команда git init
+2.Создали файл, прописали комманды git add . а затем git commit -m "some comment"
+3. создали новый репозиторий на GitHub
+4.git remote -v - указание на новый удаленный репозиторий
+  git remote add origin "ссылка на удаленный репозиторий" - проверка нового удыленного адреса
+5. git push --set-upstream origin master - отправка локального репозитория в удаленный
+  Затем нужно зайти на GitHub и нажать Compare & Pull Request
+6. для создания новой ветки прописываем git checkout -b developer (название ветки)
+7. git checkout -b developer_1
+8. Добавляем изменения в файл, затем пишем git add .
+                                           git commit -m "added"
+                                           git push origin developer_1
+9.Создаём новую дирректорию и клонируем туда наш репозиторий:
+md "название дириктории"
+git init
+git clone "ссылка"
+10. git checkout developer
+    git checkout developer_2 - создали новую ветку
+11. вносим изменения в файл
+    git add .
+    git commit -m "add_2"
+    git push origin developer_2
+12. git checkout developer
+13. объеденяем ветку git merge developer и отправляем на push на git
+14. объеденяем ветку git merge developer_2 и отправляем на push на git
+15. вручную разрешаем конфликты путем удаления лишней информации в файле
