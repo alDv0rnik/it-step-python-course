@@ -1,0 +1,29 @@
+1. mkdir
+2. git init
+3. git status
+4. cd 'Созданая папка"
+5. touch text.txt
+6. ls
+6. echo "вносим данные в файд" > touch text.txt
+7. git add touch text.txt
+8. git status
+9. git comit -m " коментарии по изменениям в файле"
+10. на Git hub создаем удаленный репозитории
+11. git remoute add origin
+12.git push origin "branch"
+13. git checkout -b develop
+14.develop>  git checkout -b develop_new
+15.echo "вносим данные в файд" > touch text.txt
+16. git add touch text.txt
+17. git comit -m "ad first string"
+18.git push origin develop_new
+19.mkdir
+20. git init
+21.git clone https://github.com/Triksmaster/Lesson5.git
+22. cd develop
+23.git checkout -b develop_new2
+24 . git checkout develop
+25. git merge develop
+26. git push origin develop
+27. cd develop_new
+28. gi
