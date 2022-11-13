@@ -1,0 +1,57 @@
+1. mkdir 'Lildir'
+   git init
+   git status
+
+2. cd RepLil
+   touch 'Liltext.txt'
+   git add .
+   git commit -m 'New file lil.txt'
+
+3. Создал
+
+4.git remote add origin https://github.com/IvanovIllya/RepLil.gi
+  git push origin master
+
+5. git branch developer
+   git checkout developer
+
+6. git branch dev2
+   gti checkout dev2
+
+7. git add .
+   git status
+   git commit -m 'modified file'
+   git push origin dev2
+
+8. cd ..
+   mkdir 'cloneLilrep'
+   cd cloneLilrep
+   git init
+   git clone https://github.com/IvanovIllya/RepLil.git
+
+9. cd Lilrep
+   git branch -a
+   git checkout developer
+   git checkout -b Lildev
+
+10.git add .
+   git commit -m 'Zzzzzz'
+   git push origin Lildev
+
+11.git checkout developer
+
+12.git merge dev2
+   git add .
+   git push origin developer
+
+13.git merge lildev
+   git add.
+   git push origin developer
+
+14.Разрешил
+
+15.Отправил
+   
+
+
+
