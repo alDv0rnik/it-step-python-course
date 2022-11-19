@@ -1,4 +1,4 @@
-def func(value ):
+def func(value):
     result = []
     for i in value:
         if i not in result:
