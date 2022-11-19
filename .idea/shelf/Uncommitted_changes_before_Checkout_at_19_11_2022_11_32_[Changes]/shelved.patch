@@ -1,0 +1,83 @@
+Index: lesson_7.py
+===================================================================
+diff --git a/lesson_7.py b/lesson_7.py
+--- a/lesson_7.py	
++++ b/lesson_7.py	
+@@ -36,18 +36,19 @@
+ # print(dict_last_3)
+ 
+ 
+-# Task 5
+-# dict_1 = {"a": 1, "b": 2, "c": [3, 4 , 4], "d": 4, "e": 5}
+-# k, v = dict_1.popitem()
+-# del dict_1["a"]
+-# d = {}
+-# d[k] = v
+-# dict_1["a"] = 1
+-# dict_1, d = d, dict_1
+-# dict_1.update(d)
+-# del dict_1["b"]
+-# dict_1["new_key"] = "new_value"
+-# print(dict_1)
++#Task 5
++dict_1 = {"a": 1, "b": 2, "c": [3, 4 , 4], "d": 4, "e": 5}
++k, v = dict_1.popitem()
++del dict_1["a"]
++d = {}
++d[k] = v
++dict_1["a"] = 1
++dict_1, d = d, dict_1
++dict_1.update(d)
++del dict_1["b"]
++dict_1["new_key"] = "new_value"
++print(dict_1)
++
+ 
+ # Tasck 6
+ # a = input("Введите сталицу Беларуси: ")
+@@ -107,3 +108,4 @@
+ 
+ 
+ 
++
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -2,9 +2,8 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="36ef5699-b3fb-49a7-bdb7-3514b3040a51" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/BirthDays.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/card_dealer.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/lesson_7.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lesson_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_7.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -25,6 +24,7 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -87,6 +87,7 @@
+       <method v="2" />
+     </configuration>
+     <configuration name="lesson_7" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
++      <module name="it-step-python-course" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <envs>
+@@ -97,7 +98,6 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <module name="" />
+       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_7.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
