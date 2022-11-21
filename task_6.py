@@ -5,7 +5,6 @@ from typing import List
 def split_by_index(s: str, indexes: List[int]):
     str_end = list()
     o = 0
-    global i
     for i in indexes:
         if i < len(s):
             str_end.append(s[o:i])
