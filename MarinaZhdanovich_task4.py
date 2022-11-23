@@ -1,4 +1,7 @@
-def get_pairs(lst: list):
+from typing import List, Tuple
+
+
+def get_pairs(lst: List) -> List[Tuple] | None:
     list_result = []
     if len(lst) == 1:
         return None
