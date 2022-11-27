@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4df0ef1-50ef-4328-9186-bc7469ce714d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarinaZhdanovich_task2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarinaZhdanovich_task3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarinaZhdanovich_task4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarinaZhdanovich_task5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
       <recent name="C:\Users\User\PycharmProjects\it-step-python-course" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MarinaZhdanovich_task2">
+  <component name="RunManager" selected="Python.MarinaZhdanovich_task5">
     <configuration name="MarinaZhdanovich_task2" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="it-step-python-course" />
       <option name="INTERPRETER_OPTIONS" value="" />
