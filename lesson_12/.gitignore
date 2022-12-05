@@ -1,0 +1,33 @@
+../.idea
+../Hometask.md
+Task_5_figures/figures/__init__.py
+Task_5_figures/figures/square/code.py
+Task_5_figures/figures/triangle/code.py
+../.idea/
+Task_5_figures/figures/__pycache__/
+Task_5_figures/figures/circle/__pycache__/
+Task_5_figures/figures/square/__pycache__/
+Task_5_figures/figures/triangle/__pycache__/
+../savchyn zahar lesson_11.zip
+../savchyn zahar lesson_11/
+../Hometask.md
+Task_5_figures/figures/__init__.py
+Task_5_figures/figures/square/code.py
+Task_5_figures/figures/triangle/code.py
+        ../.idea/
+        ../savchyn zahar lesson_11.zip
+        ../savchyn zahar lesson_11/
+.idea/.gitignore
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/it-step-python-course.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+savchyn zahar lesson_11.zip
+savchyn zahar lesson_11/task_1.py
+savchyn zahar lesson_11/task_2.py
+savchyn zahar lesson_11/task_3.py
+savchyn zahar lesson_11/task_4.py
+
+
+
