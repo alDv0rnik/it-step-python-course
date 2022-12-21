@@ -1,0 +1,600 @@
+Index: task3.py
+===================================================================
+diff --git a/task3.py b/task3.py
+deleted file mode 100644
+--- a/task3.py	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,25 +0,0 @@
+-import csv
+-
+-
+-def get_top_performers(file_path, number_of_top_students=5):
+-    students = dict()
+-    with open('data/students.csv', 'r') as rf:
+-        r_object = csv.DictReader(rf, delimiter=',')
+-        for row in r_object:
+-            students[row['student name']] = float(row['average mark'])
+-
+-    list_val = list(reversed(sorted(students.values())))
+-
+-    res = list()
+-    for _ in list_val:
+-        for k, v, in students.items():
+-            if v == _ and k not in res:
+-                res.append(k)
+-
+-    print(res[0:number_of_top_students])
+-
+-
+-get_top_performers('students.csv')
+-
+-
+-
+Index: task4.py
+===================================================================
+diff --git a/task4.py b/task4.py
+deleted file mode 100644
+--- a/task4.py	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,13 +0,0 @@
+-import csv
+-
+-with open('data/in.csv', 'r') as rf:
+-    res, err = 0, 0
+-    r_object = csv.reader(rf, delimiter=',')
+-    for row in r_object:
+-        try:
+-            res += float(row[int(row[0])])
+-        except:
+-            err += 1
+-
+-print(res, err, sep=',')
+-
+Index: data/sorted_name.txt
+===================================================================
+diff --git a/data/sorted_name.txt b/data/sorted_name.txt
+deleted file mode 100644
+--- a/data/sorted_name.txt	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,199 +0,0 @@
+-Adele
+-Adrienne
+-Agueda
+-Alda
+-Alejandrina
+-Amee
+-Amelia
+-Antonio
+-Antony
+-Bari
+-Bettina
+-Blanca
+-Brooks
+-Buck
+-Carisa
+-Carlotta
+-Caroll
+-Carson
+-Catalina
+-Catherin
+-Cecille
+-Charleen
+-Charlie
+-Cheryll
+-Chet
+-Cheyenne
+-Ching
+-Chrissy
+-Christa
+-Ciera
+-Cindi
+-Claudia
+-Clay
+-Columbus
+-Corrie
+-Corrin
+-Craig
+-Cristal
+-Dagmar
+-Dannette
+-Danuta
+-Darrick
+-Darryl
+-Demetrice
+-Denisse
+-Detra
+-Dierdre
+-Dino
+-Donald
+-Donnetta
+-Dorene
+-Dorothea
+-Dwana
+-Elayne
+-Elinore
+-Elisa
+-Elke
+-Elmira
+-Emanuel
+-Ericka
+-Erik
+-Erma
+-Erminia
+-Eustolia
+-Exie
+-Fatimah
+-Felton
+-Floyd
+-Fredia
+-Gaylene
+-Genesis
+-Gracia
+-GuillerminaAlaine
+-Gwyneth
+-Herma
+-Hiroko
+-Hwa
+-Idalia
+-Ilda
+-Irving
+-Jaimee
+-Jannette
+-Jasmine
+-Jeane
+-Jeanine
+-Jed
+-Jenifer
+-Joelle
+-Johnie
+-Julian
+-Junita
+-Justina
+-Ka
+-Karl
+-Karyl
+-Kasha
+-Katerine
+-Katharyn
+-Kayce
+-Keisha
+-Kelsie
+-Kendal
+-Kiley
+-Kirstie
+-Lashanda
+-Lavern
+-Len
+-Lena
+-Leonie
+-Lindy
+-Lisha
+-Loan
+-Lolita
+-Long
+-Louis
+-Luisa
+-Luz
+-Lydia
+-Lynne
+-Maggie
+-Maisha
+-Major
+-Marcelina
+-Marco
+-Margareta
+-Mariah
+-Marisol
+-Marla
+-Marline
+-Marlon
+-Marquetta
+-Mathilda
+-Matt
+-Maximina
+-Meda
+-Mei
+-Merideth
+-Merrill
+-Mervin
+-Michele
+-Mignon
+-Milissa
+-Morris
+-Myrl
+-Nicky
+-Nicolas
+-Ninfa
+-Noelia
+-Norman
+-Octavia
+-Oliva
+-Oma
+-Patsy
+-Penny
+-Petrina
+-Quentin
+-Ramiro
+-Randa
+-Randy
+-Raquel
+-Rebeca
+-Regina
+-Rena
+-Ricarda
+-Rina
+-Roberta
+-Roberto
+-Ronda
+-Rosetta
+-Royce
+-Sage
+-Samella
+-Sanjuanita
+-Saundra
+-Sebastian
+-Sharie
+-Sharleen
+-Sharon
+-Shavonda
+-Shea
+-Sheila
+-Sherry
+-Starla
+-Susanna
+-Tammie
+-Tashia
+-Tena
+-Toya
+-Treasa
+-Twanna
+-Tyler
+-Valentin
+-Vernell
+-Victoria
+-Vita
+-Wan
+-Williams
+-Willodean
+-Xavier
+Index: task2.py
+===================================================================
+diff --git a/task2.py b/task2.py
+deleted file mode 100644
+--- a/task2.py	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,20 +0,0 @@
+-def most_common_words(file_path, number_of_words=3):
+-    with open('data/lorem_ipsum.txt', 'r') as rf:
+-        words = rf.read().replace(',', '').replace('.', '').lower().split()
+-
+-    d_words = {}
+-    for word in words:
+-        d_words[word] = words.count(word)
+-
+-    list_val = list(reversed(sorted(d_words.values())))
+-
+-    res = []
+-    for _ in list_val:
+-        for k, v in d_words.items():
+-            if v == _:
+-                res.append(k)
+-
+-    print(res[0:number_of_words])
+-
+-
+-most_common_words('lorem_ipsum.txt')
+\ No newline at end of file
+Index: data/lorem_ipsum.txt
+===================================================================
+diff --git a/data/lorem_ipsum.txt b/data/lorem_ipsum.txt
+deleted file mode 100644
+--- a/data/lorem_ipsum.txt	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,19 +0,0 @@
+-Lorem ipsum suspendisse nostra ullamcorper diam donec etiam nulla sagittis est aliquam, dictum aliquet luctus risus est habitant suspendisse luctus id inceptos lectus, aenean donec maecenas donec aenean fringilla vitae fermentum venenatis enim ultrices per etiam ut aenean odio.
+-
+-Habitasse ad sollicitudin arcu senectus enim etiam platea quisque purus odio sociosqu maecenas habitant, quisque laoreet himenaeos elementum consequat auctor ad dictum viverra donec faucibus enim scelerisque eu sodales vel lobortis euismod cubilia, dictum ut consectetur nisi litora ut, blandit vehicula sapien et fames tempor congue tristique urna inceptos neque suspendisse felis venenatis cras metus risus tellus nulla imperdiet maecenas potenti vestibulum id aliquam himenaeos a primis tortor, facilisis ullamcorper donec augue integer euismod habitasse orci vestibulum convallis.
+-
+-Augue eget primis sit iaculis placerat viverra conubia class consectetur porttitor luctus aenean, dui hac quis eros vivamus praesent taciti arcu nullam semper ullamcorper, maecenas turpis quis metus fringilla aptent et etiam rutrum viverra integer orci fermentum lacinia risus purus rhoncus torquent aenean augue felis ultricies, donec luctus dui eros pulvinar primis bibendum accumsan purus donec pharetra, eleifend varius lorem fames at viverra praesent justo lectus.
+-
+-Ligula tincidunt ultrices et lobortis ultrices mollis quisque egestas bibendum, etiam maecenas consectetur quam non ornare dictum donec nullam, platea aliquet duis aenean cras placerat aliquam integer venenatis interdum gravida est massa faucibus porta arcu, velit urna cursus laoreet vulputate dictumst hendrerit ornare, torquent ultricies metus sed turpis scelerisque suspendisse vulputate cubilia gravida suspendisse neque consequat laoreet, odio faucibus vestibulum cras cursus urna tincidunt, euismod nulla auctor eu diam habitant.
+-
+-Faucibus maecenas dapibus hendrerit conubia maecenas eros tempus molestie tincidunt dolor, lacinia himenaeos etiam duis nec felis hac interdum malesuada pharetra praesent, nostra ut donec non id tempus at ultricies sodales dapibus id per magna erat justo phasellus, lorem tellus neque enim quam vivamus, congue ad leo iaculis libero blandit eros interdum nullam rhoncus porta aliquam tristique fringilla, faucibus augue elit quis auctor volutpat imperdiet curabitur, tortor pellentesque vehicula fames venenatis aliquam cursus.
+-
+-At volutpat himenaeos eleifend mollis nunc per leo diam per leo mollis, sagittis etiam tortor arcu suscipit egestas et ullamcorper mollis commodo at ornare at ante sociosqu sed in, elementum primis curae enim suspendisse volutpat condimentum, id in ad eu maecenas aliquam proin erat magna vivamus fermentum blandit nec faucibus, viverra torquent massa tortor adipiscing ad consectetur interdum aptent, magna accumsan egestas magna ut iaculis est.
+-
+-Dictum aenean integer interdum sed potenti tincidunt sem aptent, gravida nunc malesuada bibendum class quam taciti duis a, ipsum orci proin mollis lorem in himenaeos.
+-
+-Sed tincidunt lectus ad pharetra vel proin massa aliquam molestie, lectus vel primis facilisis aliquam lacinia ultricies fames feugiat, eleifend tempus sodales volutpat congue dolor primis pulvinar tellus lorem risus porttitor morbi vivamus turpis scelerisque habitant cursus, vivamus morbi quisque class eget aliquet suspendisse laoreet faucibus, pulvinar vulputate at cursus morbi ac euismod lectus aenean potenti pellentesque conubia etiam porttitor tincidunt quisque adipiscing laoreet lobortis nulla sociosqu lobortis consectetur lobortis iaculis ad blandit donec sapien in vehicula tellus est vivamus taciti ultrices fermentum viverra turpis volutpat ligula.
+-
+-Vehicula nullam hac lacinia nunc pulvinar nullam quam leo proin, in tristique donec pretium vestibulum consectetur pulvinar bibendum egestas, pharetra habitasse class vitae quisque phasellus turpis non eleifend arcu ultricies blandit curabitur venenatis rutrum vivamus a, primis urna viverra accumsan tristique mi vulputate.
+-
+-Netus enim eros sed duis nostra vestibulum nulla, urna eleifend curabitur lobortis aliquet cursus himenaeos primis, quam pharetra cursus urna quisque a ipsum nibh dapibus diam ante proin convallis venenatis accumsan lorem est tortor inceptos lacinia vestibulum lobortis metus praesent leo eget in ante volutpat consectetur diam.
+\ No newline at end of file
+Index: HOMETASK.md
+===================================================================
+diff --git a/HOMETASK.md b/HOMETASK.md
+deleted file mode 100644
+--- a/HOMETASK.md	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,64 +0,0 @@
+-### Задание 2 (I)
+-#### Откройте файл `data/unsorted_names.txt` в папке данных. Сортируйте имена и записывайте их в новый файл sorted_names.txt. Каждое имя должно начинаться с новой строки, как в следующем примере:
+-
+-```python
+-Adele
+-Adrienne
+-...
+-Willodean
+-Xavier
+-```
+-
+-### Задание 3 (I)
+-#### Реализовать функцию поиска наиболее распространенных слов в файле. Используйте файл `data/lorem_ipsum.txt`. ПРИМЕЧАНИЕ: Помните о точках, запятых, заглавных буквах и т.д. 
+-
+-```python
+-def most_common_words(filepath, number_of_words=3):
+-    pass
+-
+-print(most_common_words('lorem_ipsum.txt'))
+->>> ['donec', 'etiam', 'aliquam']
+-```
+-
+-### Задание 4 (I)
+-#### Файл `data/students.csv` хранит информацию о студентах в формате CSV: имена студентов, возраст и среднюю отметку.
+-#### 1.	Реализуйте функцию, которая получает путь к файлу и возвращает имена лучших учеников
+-
+-```python
+-def get_top_performers(file_path, number_of_top_students=5):
+-    pass
+-
+-print(get_top_performers("students.csv"))
+->>> ['Teresa Jones', 'Richard Snider', 'Jessica Dubose', 'Heather Garcia', 'Joseph Head']
+-```
+-
+-#### 2.	Реализуйте функцию, которая получает путь к файлу с информацией `srudents` и записывает информацию о студенте в новый файл csv в порядке убывания возраста. Результат:
+-
+-```python
+-student name,age,average mark
+-Verdell Crawford,30,8.86
+-Brenda Silva,30,7.53
+-...
+-Lindsey Cummings,18,6.88
+-Raymond Soileau,18,7.27
+-
+-```
+-
+-### Задание 5 (II) 
+-#### Текстовый файл `in.csv` (текстовые данные, разделенные запятой) содержит некоторую последовательность строк с любым числом элементов в каждой строке. Пусть начальный элемент любой строки имеет индекс 0. Его значение определяет индекс элемента в строке, с которым вы должны работать. 
+-#### 1. Рассчитайте сумму элементов, определяемых нулевыми элементами. Выведите этот результат в консоли. Формат вывода приведен в примерах ниже. 
+-#### 2. Вывести количество строк с "ошибками" 
+-
+-```python
+-Input:                                   Input:
+-3,qw,4,5.2,2.7                           3,qw,4,-3.1,2.7
+-15,,,k,5                                 1,-1,fgh,5
+-1,-3.14,fgh,5
+-0,,e1,2,3
+-2.3,a,b,c
+-b,b,e
+-
+-Output:                                  Output:
+-Result (5.2 - 3.14 + 0.0) = 2.06         Result (-3.1 - 1) = -4.1
+-error-lines = 3                          error-lines = 0
+-```
+Index: data/unsorted_names.txt
+===================================================================
+diff --git a/data/unsorted_names.txt b/data/unsorted_names.txt
+deleted file mode 100644
+--- a/data/unsorted_names.txt	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,199 +0,0 @@
+-Erminia
+-Elisa
+-Ricarda
+-Royce
+-Amelia
+-Mariah
+-Kendal
+-Karl
+-Eustolia
+-Clay
+-Erma
+-Vita
+-Corrin
+-Sanjuanita
+-Shavonda
+-Donnetta
+-Adrienne
+-Ching
+-Leonie
+-Wan
+-Cheyenne
+-Sharon
+-Milissa
+-Marlon
+-Lena
+-Adele
+-Amee
+-Lolita
+-Junita
+-Agueda
+-Maggie
+-Herma
+-Major
+-Tyler
+-Ka
+-Dannette
+-Carlotta
+-Donald
+-Ramiro
+-Norman
+-Columbus
+-Detra
+-Maximina
+-Cindi
+-Elke
+-Tammie
+-Claudia
+-Irving
+-Jeane
+-Susanna
+-Michele
+-Chet
+-Kirstie
+-Blanca
+-Dorothea
+-Octavia
+-Randa
+-Louis
+-Penny
+-Twanna
+-Darryl
+-Mignon
+-Myrl
+-Lavern
+-Christa
+-Brooks
+-Samella
+-Roberto
+-Fredia
+-Raquel
+-Darrick
+-Willodean
+-Denisse
+-Idalia
+-Alda
+-Lashanda
+-Shea
+-Treasa
+-Rosetta
+-Charleen
+-Marisol
+-Matt
+-Keisha
+-Len
+-Tena
+-Mervin
+-Regina
+-Loan
+-Starla
+-Julian
+-Roberta
+-Long
+-Mei
+-Felton
+-Merrill
+-Lisha
+-Lydia
+-Toya
+-Katharyn
+-Fatimah
+-Cristal
+-Mathilda
+-Merideth
+-Carson
+-Marcelina
+-Floyd
+-Demetrice
+-Luz
+-Cheryll
+-Saundra
+-Vernell
+-Sheila
+-Quentin
+-Oliva
+-Victoria
+-Sage
+-Emanuel
+-Gwyneth
+-Buck
+-Patsy
+-Jeanine
+-Gaylene
+-Noelia
+-Dorene
+-Petrina
+-Chrissy
+-Kelsie
+-Marla
+-Antonio
+-Kiley
+-Katerine
+-Rina
+-Bettina
+-Charlie
+-Dino
+-Meda
+-Sherry
+-Gracia
+-Maisha
+-Hiroko
+-Margareta
+-Caroll
+-Sharie
+-Ciera
+-Lindy
+-Dierdre
+-Alejandrina
+-Jannette
+-Marco
+-Hwa
+-Exie
+-Jed
+-Rena
+-Rebeca
+-Luisa
+-Jasmine
+-Elinore
+-Tashia
+-GuillerminaAlaine
+-Ronda
+-Kasha
+-Joelle
+-Antony
+-Bari
+-Nicolas
+-Johnie
+-Ninfa
+-Sebastian
+-Catalina
+-Nicky
+-Justina
+-Danuta
+-Morris
+-Jaimee
+-Erik
+-Jenifer
+-Cecille
+-Lynne
+-Sharleen
+-Valentin
+-Elayne
+-Kayce
+-Karyl
+-Catherin
+-Craig
+-Marline
+-Ilda
+-Xavier
+-Genesis
+-Corrie
+-Elmira
+-Ericka
+-Carisa
+-Dwana
+-Randy
+-Marquetta
+-Dagmar
+-Williams
+-Oma
+Index: task1.py
+===================================================================
+diff --git a/task1.py b/task1.py
+deleted file mode 100644
+--- a/task1.py	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
++++ /dev/null	(revision 7fd7adc4a4ee8cb80def3b4b4a4595e23dad7ae2)
+@@ -1,3 +0,0 @@
+-with open('data/unsorted_names.txt', 'r') as rf, open('data/sorted_name.txt', 'w') as wf:
+-    wf.writelines(sorted(rf.readlines()))
+-    
