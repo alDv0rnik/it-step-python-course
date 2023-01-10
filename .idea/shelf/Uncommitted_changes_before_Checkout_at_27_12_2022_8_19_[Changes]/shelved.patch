@@ -1,0 +1,17 @@
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -2,9 +2,8 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="38951af0-8516-4922-88d4-a91ddea73903" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/task3.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/task4.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/task3.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/task4.py" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
